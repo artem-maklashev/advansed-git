@@ -20,24 +20,24 @@ public class Generator {
         this.totalWeight = totalWeight;
     }
 
-    public Toy getToy() {
-        Toy toy = null;
-        int randomIndex = -1;
-        int random = (int) (Math.random() * this.totalWeight);
-        PriorityQueue<Toy> temp = this.toys;
-        for (int i = 0; i < this.toys.size(); i++) {
-            random -= Objects.requireNonNull(temp.poll()).getWeight();
-            if (random <= 0) {
-                randomIndex = i;
-                PriorityQueue<Toy> temp2 = this.toys;
-                for (int j = 0; j <=randomIndex;
-                j++){
-                    toy = temp2.poll();
-                }
-            }
-        }
-        return toy;
-    }
+    // public Toy getToy() {
+    //     Toy toy = null;
+    //     int randomIndex = -1;
+    //     int random = (int) (Math.random() * this.totalWeight);
+    //     PriorityQueue<Toy> temp = this.toys;
+    //     for (int i = 0; i < this.toys.size(); i++) {
+    //         random -= Objects.requireNonNull(temp.poll()).getWeight();
+    //         if (random <= 0) {
+    //             randomIndex = i;
+    //             PriorityQueue<Toy> temp2 = this.toys;
+    //             for (int j = 0; j <=randomIndex;
+    //             j++){
+    //                 toy = temp2.poll();
+    //             }
+    //         }
+    //     }
+    //     return toy;
+    // }
 
 
 }
