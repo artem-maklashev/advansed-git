@@ -47,23 +47,23 @@ public class ConsoleUI implements View{
         if (index >= 0) this.presenter.removeToy(index);
     }
 
-    public int selectIndex(){
-        int index = -1;
-        if (s.hasNextInt()){
-           index = s.nextInt();
-           int shopSize = presenter.getShopSize();
-           if (index > shopSize) {
-              message("Игрушки с таким номером нет в магазине");
-           } else if (index <=0) {
-               return -1;
-           } else {
-               index -= 1;
-           }
-       } else {
-           message("Номер должен быть целым числом.");
-       }
-         return index;
-    }
+    // public int selectIndex(){
+    //     int index = -1;
+    //     if (s.hasNextInt()){
+    //         index = s.nextInt();
+    //         int shopSize = presenter.getShopSize();
+    //         if (index > shopSize) {
+    //             message("Игрушки с таким номером нет в магазине");
+    //         } else if (index <=0) {
+    //             return -1;
+    //         } else {
+    //             index -= 1;
+    //         }
+    //     } else {
+    //         message("Номер должен быть целым числом.");
+    //     }
+    //     return index;
+    // }
 
     @Override
     public void changeWeight() {
