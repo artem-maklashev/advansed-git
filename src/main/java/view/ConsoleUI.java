@@ -47,6 +47,8 @@ public class ConsoleUI implements View{
         if (index >= 0) this.presenter.removeToy(index);
     }
 
+    // метод раскомментирован
+
     public int selectIndex(){
         int index = -1;
         if (s.hasNextInt()){
